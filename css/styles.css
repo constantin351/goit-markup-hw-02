@@ -8,24 +8,25 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --white-color: #ffffff;
+
+  --primary-background-color: #ffffff;
+  --secondary-background-color: #2f303a;
+  --team-background-color: #f5f4fa;
+  --blue-hover-focus-active-color: #188ce8;
+  --footer-email-phone-color: rgba(255, 255, 255, 0.6);
 }
 
 /* BODY */
 body {
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
-  background-color: #f5f5f5;
+  background-color: var(--primary-background-color);
 }
 
 /* logo */
 .logo {
-  width: 145px;
-  height: 31px;
-  left: 215px;
-  top: 24px;
   color: #000000;
   font-family: 'Raleway';
-  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -36,7 +37,6 @@ body {
 .logo-part {
   color: var(--accent-color);
   font-family: 'Raleway';
-  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -47,7 +47,6 @@ body {
 .footer-logo {
   color: var(--white-color);
   font-family: 'Raleway';
-  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -55,18 +54,9 @@ body {
   text-decoration: none;
 }
 
-.logo:hover,
-.logo:focus,
-.footer-logo:hover,
-.footer-logo:focus {
-  color: var(--accent-color);
-}
-
 /* site-nav */
 
 .site-nav.list {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -92,7 +82,6 @@ body {
 .email,
 .phone {
   color: var(--primary-text-color);
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -109,9 +98,9 @@ body {
 
 /* PORTFOLIO buttons */
 .button {
+  font-family: inherit;
   color: var(--title-text-color);
-  background-color: #f5f4fa;
-  font-style: normal;
+  background-color: var(--team-background-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -147,7 +136,6 @@ body {
   color: var(--white-color);
   background-color: var(--accent-color);
   cursor: pointer;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -158,14 +146,9 @@ body {
 }
 
 .hero .button:hover,
-.hero .button:focus {
-  color: var(--title-text-color);
-  background-color: var(--accent-color);
-}
-
+.hero .button:focus,
 .hero .button:active {
-  color: var(--white-color);
-  background-color: #188ce8;
+  background-color: var(--blue-hover-focus-active-color);
 }
 
 /* ЗАГОЛОВКИ */
@@ -188,7 +171,7 @@ body {
 
 .features .text {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
@@ -218,14 +201,15 @@ body {
 
 /* PORTFOLIO projects list АБЗАЦЫ */
 .portfolio-list .text {
-    line-height: 1.88;
-    letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
 }
 
 /* FOOTER */
 .post-address {
   color: var(--white-color);
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -235,8 +219,7 @@ body {
 
 .footer-email,
 .footer-phone {
-  color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
+  color: var(--footer-email-phone-color);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -265,6 +248,11 @@ body {
   list-style: none;
 }
 
+/* убирает подчеркивание ссылок */
+.link {
+  text-decoration: none;
+}
+
 /* ФОНЫ */
 .page-header,
 .main-portfolio,
@@ -273,11 +261,11 @@ body {
 }
 
 .hero {
-  background: #2f303a;
+  background-color: var(--secondary-background-color);
 }
 
 .section-team {
-  background: #f5f4fa;
+  background-color: var(--team-background-color);
 }
 
 .footer {
@@ -285,5 +273,5 @@ body {
   height: 252px;
   left: 0px;
   top: 1628px;
-  background: #2f303a;
+  background-color: var(--secondary-background-color);
 }
